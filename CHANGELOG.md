@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.0] - 2022-12-19
+
+### Features
+
+- Add builtin rule set for SILE globals (#79) — @alerque
+- Implement support for compound operators (#66) — @a2 & @arichard4
+
+### Bug Fixes
+
+- Correct circular reference detection visavis OpSet — @arichard4
+- Remove unnecessary symbol from Playdate std (#84) — @DidierMalenfant
+
 ## v1.0.0 (2022-08-24)
 
 ### Documentation
