@@ -10,11 +10,11 @@ All notable changes to this project will be documented in this file.
 
 ### Features
 
-- Overhaul docker container to run on Lua 5.4
-- Store cached luacheck values per-version in case of changes
-- Set_default_std for ldoc
-- Add builtin std option for Ldoc globals
-- Add builtin std option for the Playdate SDK
+- Overhaul docker container to run on Lua 5.4 — @alerque
+- Store cached luacheck values per-version in case of changes — @arichard4
+- Set_default_std for ldoc — @Aire-One
+- Add builtin std option for Ldoc globals — @Aire-One
+- Add builtin std option for the Playdate SDK — @DidierMalenfant
 
 ## v0.26.1 (2022-04-23)
 
