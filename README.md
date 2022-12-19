@@ -2,8 +2,8 @@
 
 [![Join the chat at https://gitter.im/luacheck/Lobby](https://badges.gitter.im/luacheck/Lobby.svg)](https://gitter.im/luacheck/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-[![Luacheck](https://img.shields.io/github/workflow/status/lunarmodules/luacheck/Luacheck?label=Luacheck&logo=Lua)](https://github.com/lunarmodules/luacheck/actions?workflow=Luacheck)
-[![Busted](https://img.shields.io/github/workflow/status/lunarmodules/luacheck/Busted?label=Busted&logo=Lua)](https://github.com/lunarmodules/luacheck/actions?workflow=Busted)
+[![Luacheck](https://img.shields.io/github/actions/workflow/status/lunarmodules/luacheck/luacheck.yml?branch=master&label=Luacheck&logo=Lua)](https://github.com/lunarmodules/luacheck/actions?workflow=Luacheck)
+[![Busted](https://img.shields.io/github/actions/workflow/status/lunarmodules/luacheck/busted.yml?branch=master&label=Busted&logo=Lua)](https://github.com/lunarmodules/luacheck/actions?workflow=Busted)
 [![Coverage Status](https://img.shields.io/coveralls/github/lunarmodules/luacheck?label=Coveralls&logo=Coveralls)](https://coveralls.io/github/lunarmodules/luacheck?branch=master)
 [![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/lunarmodules/luacheck?label=Tag&logo=GitHub)](https://github.com/lunarmodules/luacheck/releases)
 [![Luarocks](https://img.shields.io/luarocks/v/lunarmodules/luacheck?label=Luarocks&logo=Lua)](https://luarocks.org/modules/lunarmodules/luacheck)
