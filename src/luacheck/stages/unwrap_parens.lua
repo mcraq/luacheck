@@ -50,7 +50,7 @@ local function handle_nodes(chstate, nodes, list_start)
             if node[2] then
                handle_nodes(chstate, node[2])
             end
-         elseif tag == "Set" then
+         elseif tag == "Set" or tag == "OpSet" then
             handle_nodes(chstate, node[1])
             handle_nodes(chstate, node[2], 1)
          else
@@ -67,7 +67,7 @@ local function handle_nodes(chstate, nodes, list_start)
 
             -- warn that not (x == y) can become x ~= y
             if tag == "Op" and node[1] == "not" and node[2].tag == "Op" and relational_operators[node[2][1]] then
-            chstate:warn_range("581", node, {
+               chstate:warn_range("581", node, {
                   operator = relational_operators[node[2][1]],
                   replacement_operator = replacements[node[2][1]]
                })
