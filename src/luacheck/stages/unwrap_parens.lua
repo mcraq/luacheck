@@ -54,14 +54,13 @@ local function handle_nodes(chstate, nodes, list_start)
             handle_nodes(chstate, node[1])
             handle_nodes(chstate, node[2], 1)
          else
-            -- warn that not x == y means (not x) == y
-            if tag ~= "Paren"
-               and node[1]
-               and node[1].tag == "Op"
-               and relational_operators[node[1][1]]
-               and node[1][2][1] == "not"
+            -- warn that not x <relop> y means (not x) <relop> y
+            if tag == "Op"
+               and relational_operators[node[1]]
+               and node[2].tag == "Op"
+               and node[2][1] == "not"
             then
-               chstate:warn_range("582", node[1])
+               chstate:warn_range("582", node)
             end
 
             handle_nodes(chstate, node)
