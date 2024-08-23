@@ -11,6 +11,12 @@ WORKDIR /src
 RUN luarocks --tree /pkgdir/usr/local make
 RUN find /pkgdir -type f -exec sed -i -e 's!/pkgdir!!g' {} \;
 
+FROM builder as releaser
+
+RUN luarocks install luastatic
+RUN luastatic bin/luacheck.lua /usr/local/lib/liblua.a -I/usr/local/include -static
+CMD ["cp","/src/luacheck","/out/luacheck"]
+
 FROM akorn/lua:5.4-alpine AS final
 
 RUN apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/edge/testing \
