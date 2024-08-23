@@ -2,6 +2,9 @@ local love = require "luacheck.builtin_standards.love"
 local minetest = require "luacheck.builtin_standards.minetest"
 local playdate = require "luacheck.builtin_standards.playdate"
 local ngx = require "luacheck.builtin_standards.ngx"
+local redis5 = require "luacheck.builtin_standards.redis5"
+local redis6 = require "luacheck.builtin_standards.redis6"
+local redis7 = require "luacheck.builtin_standards.redis7"
 local standards = require "luacheck.standards"
 
 local builtin_standards = {}
@@ -264,6 +267,9 @@ lua_defs.luajit = add_defs(make_min_def("luajit"), {
 })
 lua_defs.ngx_lua = add_defs(lua_defs.luajit, ngx)
 lua_defs.max = add_defs(lua_defs.lua51c, lua_defs.lua52c, lua_defs.lua53c, lua_defs.lua54c, lua_defs.luajit)
+lua_defs.redis5 = add_defs(lua_defs.lua51, redis5)
+lua_defs.redis6 = add_defs(lua_defs.redis5, redis6)
+lua_defs.redis7 = add_defs(lua_defs.redis6, redis7)
 
 for name, def in pairs(lua_defs) do
    builtin_standards[name] = def_to_std(def)
