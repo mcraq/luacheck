@@ -2,13 +2,6 @@ local empty = {}
 
 local redis = {
     fields = {
-        ARGV = {
-            other_fields = true,
-        },
-        KEYS = {
-            other_fields = true,
-        },
-
         redis = {
             fields = {
                 call = empty,
@@ -19,8 +12,6 @@ local redis = {
                 log = empty,
                 set_repl = empty,
                 replicate_commands = empty,
-                breakpoint = empty,
-                debug = empty,
             },
         },
 

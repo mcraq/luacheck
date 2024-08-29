@@ -5,6 +5,8 @@ local ngx = require "luacheck.builtin_standards.ngx"
 local redis5 = require "luacheck.builtin_standards.redis5"
 local redis6 = require "luacheck.builtin_standards.redis6"
 local redis7 = require "luacheck.builtin_standards.redis7"
+local redis_scripts = require "luacheck.builtin_standards.redis_scripts"
+local redis_functions = require "luacheck.builtin_standards.redis_functions"
 local standards = require "luacheck.standards"
 
 local builtin_standards = {}
@@ -270,6 +272,8 @@ lua_defs.max = add_defs(lua_defs.lua51c, lua_defs.lua52c, lua_defs.lua53c, lua_d
 lua_defs.redis5 = add_defs(lua_defs.lua51, redis5)
 lua_defs.redis6 = add_defs(lua_defs.redis5, redis6)
 lua_defs.redis7 = add_defs(lua_defs.redis6, redis7)
+lua_defs.redis_scripts = redis_scripts
+lua_defs.redis_functions = redis_functions
 
 for name, def in pairs(lua_defs) do
    builtin_standards[name] = def_to_std(def)
